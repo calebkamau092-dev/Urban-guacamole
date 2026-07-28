@@ -16,8 +16,21 @@ function MyComponent3() { //Reactfragment
     </div>
   );
 }
+
+function ParentComponent() {
+  return (
+    <div>
+      <h1>This is the parent component</h1>
+      <MyComponent /> {/* self closing tag */}
+      <MyComponent></MyComponent> {/* open and self closing tags */}
+      <MyComponent2 />
+      <MyComponent3 />
+    </div>
+  );
+}
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <h1>My first react app</h1>
+    <ParentComponent />
   </StrictMode>,
 )
