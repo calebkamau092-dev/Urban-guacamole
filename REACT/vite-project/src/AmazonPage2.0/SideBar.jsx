@@ -1,53 +1,15 @@
 import FilterList from "./FilterList";
-
 function SideBar() {
   return (
-    <div
-      style={{
-        display: "flex",
-        width: "500px",
-        flexDirection: "column",
-      }}
-    >
-      <FilterList
-        title={"Conditions"}
-        options={["New", "Used", "Renewed"]}
-      />
+    <div style={{ display: "flex", width: "400px", flexDirection: "column" }}>
+      <FilterList title={"conditions"} options={["New", "Used", "Renewed"]} />
+      <FilterList title={"Uses"} options={["plastic","rubber","PVC","Aluminium"]}/>
+         <FilterList title={"brand"} options={["cross rope","venum","sport bit","Adidas"]}/>
 
-      <FilterList
-        title={"Material"}
-        options={[
-          "Plastic",
-          "Rubber",
-          "PVC",
-          "Allot Stel",
-          "Aluminium",
-        ]}
-      />
-
-      <FilterList
-        title={"Uses"}
-        options={[
-          "Exercise",
-          "Speed And Endurance",
-          "Boxing",
-          "Body Building",
-          "Marital Arts",
-        ]}
-      />
-
-      <FilterList
-        title={"Brand"}
-        options={[
-          "Cross Rope",
-          "Venum",
-          "Sport Bit",
-          "Canon Sprot",
-          "Adidas",
-        ]}
-      />
+   
+   
+   
     </div>
   );
 }
-
 export default SideBar;
